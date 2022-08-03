@@ -22,4 +22,4 @@
 
 
 ## Blog
-##### [ Linux Install Tutorial](pkrittapon/pkrittapon.github.io/Install_linux.html)
+##### [ Linux Install Tutorial](https://pkrittapon.github.io/Install_linux.html)
