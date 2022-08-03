@@ -1,6 +1,6 @@
 # contact me
-### email:[krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
-### facebook:[Krittapon Phacharoen](facebook.com/kritapon.phacharoen)
+### email:[ krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
+### facebook:[ Krittapon Phacharoen](facebook.com/kritapon.phacharoen)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
