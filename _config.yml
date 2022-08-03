@@ -1,3 +1,5 @@
 title: Krittapon Phacharoen
 description: Krittapon's github web
 theme: jekyll-theme-minimal
+baseurl: "/pkrittapon.github.io" # the subpath of your site, e.g. /blog
+url: "pkrittapon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
