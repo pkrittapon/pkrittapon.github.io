@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/pkrittapon/pkrittapon.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+#contact me
+### email:[krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
+### facebook:[Krittapon Phacharoen](facebook.com/kritapon.phacharoen)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
