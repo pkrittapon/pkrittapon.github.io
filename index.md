@@ -2,7 +2,11 @@
 ### email:[ krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
 ### facebook:[ Krittapon Phacharoen](facebook.com/kritapon.phacharoen)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Educated
+####Bachelor's degree:
+> Computer Engineering - King Monkut's University of Technology North Bangkok
+> - 2021 - now
+
 
 ### Markdown
 
