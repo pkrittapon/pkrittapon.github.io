@@ -18,8 +18,8 @@
 > Suankularb Wittayalai Nonthaburi
 >  - 2015 - 2018
 
+----------------------------------------------------------------
 
 
-
-### Blog
-##### [ Linux Install Tutorial](pkrittapon/pkrittapon.github.io/Install_linux)
+## Blog
+##### [ Linux Install Tutorial](pkrittapon/pkrittapon.github.io/Install_linux.html)
