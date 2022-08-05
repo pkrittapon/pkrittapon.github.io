@@ -1,4 +1,4 @@
-# Linux install tutorial
+# WSL2 and ubuntu install tutorial
 
 ### 1 Install wsl2
 
