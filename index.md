@@ -1,6 +1,7 @@
-# contact me
-
+# Profile
 ![alt text](IMG_7739-1.jpg "Profile picture")
+
+## contact me
 
 ### email:[ krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
 ### facebook:[ Krittapon Phacharoen](https://facebook.com/krittapon.phacharoen)
