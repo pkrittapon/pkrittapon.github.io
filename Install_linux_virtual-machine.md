@@ -1,9 +1,9 @@
 # Install VirtualBox and MX Linux
 
-## 1. Download VirtualBox on website [Click link download here](https://www.virtualbox.org/wiki/Downloads)
+### 1. Download VirtualBox on website [Click link download here](https://www.virtualbox.org/wiki/Downloads)
 <img src="Screenshot 2022-08-05 130827.png" alt="VirtualBox Web" width="640" height="315"/>
 
-## 2. Install VirtaulBox
+### 2. Install VirtaulBox
 <img src="Screenshot 2022-08-05 131230.png" alt="VirtualBox Install 1" width="300" height="240"/>
 
 
@@ -32,12 +32,12 @@
 
 
 
-## 3. Install VirtualBox Complete andClick New Button on Oracle VM VirtualBox Manager
+### 3. Install VirtualBox Complete andClick New Button on Oracle VM VirtualBox Manager
 
 <img src="Screenshot 2022-08-05 131632.png" alt="VirtualBox Manager Page" width="480" height="288"/>
 
 
-## 4. Create Virtual Machine 
+### 4. Create Virtual Machine 
 
 #### Choose name and OS for new virtual machine
 <img src="Screenshot 2022-08-05 131721.png" alt="VirtualBox Choose name and OS page" width="245" height="226"/>
@@ -59,8 +59,10 @@
 
 #### Click "Create" button to create new virtual machine
 
-## 5. Create new virtual machine complete
-<img src="Screenshot 2022-08-05 132149.png" alt="VirtualBox new virtual machine" width="281" height="288"/>
+### 5. Create new virtual machine complete
+<img src="Screenshot 2022-08-05 132233.png" alt="VirtualBox new virtual machine" width="281" height="288"/>
+
+#### [>> Homepage](https://pkrittapon.github.io)
 
 
 
