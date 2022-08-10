@@ -3,7 +3,7 @@
 
 ## contact me
 
-### email:[ krittapon.p@email.kmutnb,ac,th](mailto:krittapon.p@kmutnb.ac.th)
+### email:[ krittapon.p@email.kmutnb.ac.th](mailto:krittapon.p@kmutnb.ac.th)
 ### facebook:[ Krittapon Phacharoen](https://facebook.com/krittapon.phacharoen)
 
 ---------------------------------------------------------------
