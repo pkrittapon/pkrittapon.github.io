@@ -9,3 +9,8 @@
 
 
 <img src="Screenshot 2022-08-05 131311.png" alt="VirtualBox Install 2" width="300" height="240"/>
+<img src="Screenshot 2022-08-05 131349.png" alt="VirtualBox Install 3" width="300" height="240"/>
+<img src="Screenshot 2022-08-05 131418.png" alt="VirtualBox Install 4" width="300" height="240"/>
+<img src="Screenshot 2022-08-05 131440.png" alt="VirtualBox Install 5" width="300" height="240"/>
+<img src="Screenshot 2022-08-05 131459.png" alt="VirtualBox Install 6" width="300" height="240"/>
+
