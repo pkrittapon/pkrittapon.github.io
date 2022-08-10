@@ -60,7 +60,7 @@
 #### Click "Create" button to create new virtual machine
 
 ### 5. Create new virtual machine complete
-<img src="Screenshot 2022-08-05 132233.png" alt="VirtualBox new virtual machine" width="281" height="288"/>
+<img src="Screenshot 2022-08-05 132233.png" alt="VirtualBox new virtual machine" width="481" height="288"/>
 
 #### [>> Homepage](https://pkrittapon.github.io)
 
