@@ -26,4 +26,6 @@
 
 
 ## Blog
-#### [Linux Install Tutorial](https://pkrittapon.github.io/Install_linux.html)
+#### [VirtualBox and MX linux Install Tutorial]((https://pkrittapon.github.io/Install_linux_virtual-machine.html))
+#### [WSL2 and Ubuntu Install Tutorial](https://pkrittapon.github.io/Install_linux.html)
+
