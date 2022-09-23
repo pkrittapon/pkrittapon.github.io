@@ -4,7 +4,7 @@
 (https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")    // Video Link -->
 
 
-[Alternate Text]({https://cdn.discordapp.com/attachments/904417857734049815/1022147223242424370/unknown.png})({https://youtu.be/3cFXFMgyOkc} "Link Title")
+[![Alternate Text]({https://cdn.discordapp.com/attachments/904417857734049815/1022147223242424370/unknown.png})]({https://youtu.be/3cFXFMgyOkc} "Link Title")
 
 
 <!-- https://youtu.be/3cFXFMgyOkc -->
