@@ -1,14 +1,9 @@
-## Example
-<!-- [![Now in Android: 55]          // Title
-(https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
-(https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")    // Video Link -->
+## Arduino Control LED Simulator with Wokwi
 
-
-<!-- [![Alternate Text]]({https://youtu.be/3cFXFMgyOkc} "Link Title") -->
-
+#### ตัวอย่างการเขียนโค้ด Arduino บนบอร์ด Arduino nano และ ESP32 เพื่อควบคุมหลอด LED ให้แสดงผลในรูปแบบต่างๆ
+##### รูปแบบที่ 1 
+  เป็นรูปแบบที่ต้องการให้หลอด LED ติดที่ละดวง และค่อยๆเลื่อนไปทีละ 1 ตำแหน่ง
+ 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cFXFMgyOkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<!-- https://youtu.be/3cFXFMgyOkc -->
-
-<!-- https://user-images.githubusercontent.com/109802766/191900358-e85439dd-aab6-49ff-a43b-644c698de1e0.mp4 -->
 
