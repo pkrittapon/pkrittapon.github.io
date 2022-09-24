@@ -81,7 +81,7 @@ void loop() {
 
 &nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างโปรแกรมใน 2 รูปแบบ การเขียนโปรแกรมแบบปกติ และการเขียนแบบ OOP โดยการเขียนโค้ดแบบแรก มีตัวอย่างตามโค้ดด้านล่าง
 
-```
+```C++
 
 #if defined(ESP32)
 const int LED_PINS[] = {23,22,32,33,25,26,27,14,12,13};
@@ -147,6 +147,163 @@ void loop() {
 
 ```
 
+
+และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง
+
+```C++
+
+```
+
+
+ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cFXFMgyOkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+โดยข้อนี้ได้ลองนำโค้ดไป Upload ให้กับ Board Arduino Nano ที่ต่อเข้ากับ LED Array ได้ผลตามวิดีโอด้านล่าง
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A-HI3R4zhRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+#### -รูปแบบที่ 3
+
+&nbsp;&nbsp;&nbsp;&nbsp;รูปแบบนี้เป็นรูปแบบที่ปรับความสว่างของ LED โดยแต่ละหลอดจะค่อยๆติด จนติดทั้งหมด จากนั้น LED ก็จะค่อยๆดับจนดับทั้งหมด
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างการเขียนโปรแกรมแบบปกติ มีตัวอย่างตามโค้ดด้านล่าง
+
+```C++
+
+const int LED_PINS[] = {5,18,19,21};
+const int NUM_LEDS   = sizeof(LED_PINS)/sizeof(int);
+
+#define OFF (LOW) // active-low LED
+
+void setup() {
+  Serial.begin(115200);
+  for ( int i=0; i < NUM_LEDS; i++ ) {
+    // set the direction of the i-th LED pin
+    pinMode( LED_PINS[i], OUTPUT ); 
+    digitalWrite( LED_PINS[i], OFF );
+  }
+}
+
+const int PWM_RESOLUTION = 8;
+const int PWM_FREQ = 1000;
+const int DUTY_MAX = (1 << PWM_RESOLUTION);
+
+void loop() {
+  for ( int i=0; i < NUM_LEDS; i++ ) {//loop นี้ใช้เพื่อ
+      ledcSetup( i /*channel*/, PWM_FREQ, PWM_RESOLUTION );
+      ledcAttachPin( LED_PINS[i] /*pin*/, i /*channel*/ );
+      for ( int x=0; x < DUTY_MAX; x++ ) {
+        Serial.println(x);
+         ledcWrite( i, x);
+         delay(5);
+      }
+  }
+  for ( int i=0; i < NUM_LEDS; i++ ) {
+      ledcSetup( i /*channel*/, PWM_FREQ, PWM_RESOLUTION );
+      ledcAttachPin( LED_PINS[i] /*pin*/, i /*channel*/ );
+      for ( int x=DUTY_MAX; x >= 0; x-- ) {
+        Serial.println(x);
+         ledcWrite( i, x);
+         delay(5);
+      }
+  }
+  for ( int i=0; i < NUM_LEDS; i++ ) {
+    ledcDetachPin( LED_PINS[i] ); 
+    digitalWrite( LED_PINS[i], OFF );
+  }
+  delay(200);
+}
+
+```
+
+ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z8XAAt6aU2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+#### -รูปแบบที่ 3
+
+&nbsp;&nbsp;&nbsp;&nbsp;รูปแบบนี้เป็นรูปแบบที่ให้ LED ติดพร้อมกันที่ละหลายหลอด โดยแต่ละหลอดมีความสว่างไม่เท่ากัน แล้วค่อยๆเลื่อน LED ที่ติดพร้อมกันไปเรื่อยๆ ทำให้มีลักษณะคล้ายกับไฟวิ่ง
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างการเขียนโปรแกรมแบบปกติ มีตัวอย่างตามโค้ดด้านล่าง
+
+```C++
+
+const int LED_PINS[] = {5,18,19,21,12,14,27,26};
+const float diff_duty[] = {1,0.4,0.1,0.01};
+const int NUM_LEDS   = sizeof(LED_PINS)/sizeof(int);
+const int NUM_DUTY = sizeof(diff_duty)/sizeof(int);
+
+
+#define OFF (LOW) // active-low LED
+
+void setup() {
+  Serial.begin(115200);
+  for ( int i=0; i < NUM_LEDS; i++ ) {
+    // set the direction of the i-th LED pin
+    pinMode( LED_PINS[i], OUTPUT ); 
+    digitalWrite( LED_PINS[i], OFF );
+  }
+}
+
+const int PWM_RESOLUTION = 8;
+const int PWM_FREQ = 1000;
+const int DUTY_MAX = (1 << PWM_RESOLUTION);
+
+void loop() {
+  for ( int i=0; i < NUM_LEDS+NUM_DUTY; i++ ) {
+    int max_led_on;
+    if (i<NUM_DUTY){//ใช้เพื่อเลือกว่า LED จะดิดสูงสุดกี่ดวง
+      max_led_on = i+1;
+    }
+    else if (i>=NUM_LEDS){
+      max_led_on = NUM_LEDS+NUM_DUTY-i-1;
+    }
+    else{
+      max_led_on = NUM_DUTY;
+    }
+    Serial.println("i "+String(i)+"| number of led on "+String(max_led_on));
+    if (i < NUM_LEDS){//กรณีที่หัวแถวยังอยู่ใน LED
+      for (int x = 0 ; x < max_led_on; x++){
+        ledcSetup( i-x /*channel*/, PWM_FREQ, PWM_RESOLUTION );
+        ledcAttachPin( LED_PINS[i-x] /*pin*/, i-x /*channel*/ );
+        Serial.println("<pin"+String(i-x)+" | analog "+String(diff_duty[x]*DUTY_MAX));
+        ledcWrite( i-x, diff_duty[x]*DUTY_MAX );
+      }
+    }
+    else{
+      for (int x = 0 ; x < max_led_on; x++){//กรณีที่หัวแถวไม่อยู่ใน LED
+        ledcSetup( NUM_LEDS-1-x /*channel*/, PWM_FREQ, PWM_RESOLUTION );
+        ledcAttachPin( LED_PINS[NUM_LEDS-1-x] /*pin*/, NUM_LEDS-1-x /*channel*/ );
+        Serial.println(">pin"+String(NUM_LEDS-1-x)+" | analog "+String(diff_duty[x+(NUM_DUTY-max_led_on)]*DUTY_MAX));
+        ledcWrite( NUM_LEDS-1-x, diff_duty[x+(NUM_DUTY-max_led_on)]*DUTY_MAX );
+      }
+    }
+    delay(100);
+    for ( int i=0; i < NUM_LEDS; i++ ) {
+      ledcDetachPin( LED_PINS[i] );
+      digitalWrite( LED_PINS[i], OFF );
+    }
+  }
+}
+
+```
+
+ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y7x_nj6HJhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;บทความนี้เป็นเพียงแค่ตัวอย่างในการเขียนโปรแกรม Arduino เพื่อควบคุมการติด-ดับของ LED ให้เป็นในรูปแบบต่างๆ อาจจะไม่ได้มีหลักการทำงานในแต่ละวงจรบอกอย่างชัดเจนและเข้าในได้ง่าย เนื่องจากการเขียนโปรแกรมให้ควบคุมรูปแบบของ LED 1 รูปแบบ สามารถเขียนโปรแกรมได้หลายวิธีมาก ดังนั้นโค้ดที่เห็นจึงเป็นเพียงแค่ตัวอย่างเท่านั้น ไม่ใช่วิธีที่ดีที่สุดเสมอไป
 
 
 
