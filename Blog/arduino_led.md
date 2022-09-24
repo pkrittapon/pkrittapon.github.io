@@ -76,6 +76,8 @@ void loop() {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4cIonyunK7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
+
 #### -รูปแบบที่ 2
 
 
@@ -166,10 +168,14 @@ void loop() {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cFXFMgyOkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
+
 โดยข้อนี้ได้ลองนำโค้ดไป Upload ให้กับ Board Arduino Nano ที่ต่อเข้ากับ LED Array ได้ผลตามวิดีโอด้านล่าง
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A-HI3R4zhRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 
 
@@ -235,6 +241,8 @@ void loop() {
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8XAAt6aU2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 
 #### -รูปแบบที่ 3
@@ -314,6 +322,7 @@ void loop() {
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7x_nj6HJhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;บทความนี้เป็นเพียงแค่ตัวอย่างในการเขียนโปรแกรม Arduino เพื่อควบคุมการติด-ดับของ LED ให้เป็นในรูปแบบต่างๆ อาจจะไม่ได้มีหลักการทำงานในแต่ละวงจรบอกอย่างชัดเจนและเข้าในได้ง่าย เนื่องจากการเขียนโปรแกรมให้ควบคุมรูปแบบของ LED 1 รูปแบบ สามารถเขียนโปรแกรมได้หลายวิธีมาก ดังนั้นโค้ดที่เห็นจึงเป็นเพียงแค่ตัวอย่างเท่านั้น ไม่ใช่วิธีที่ดีที่สุดเสมอไป
