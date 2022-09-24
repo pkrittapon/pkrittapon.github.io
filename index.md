@@ -1,32 +1,8 @@
 # Profile
-![alt text](IMG_7739-1.jpg "Profile picture")
+#### [About Me](https://pkrittapon.github.io/about me/about_me.html)
 
-## contact me
-
-### email:[ krittapon.p@email.kmutnb.ac.th](mailto:krittapon.p@kmutnb.ac.th)
-### facebook:[ Krittapon Phacharoen](https://facebook.com/krittapon.phacharoen)
-
----------------------------------------------------------------
-
-## Educated
-
-### Bachelor's degree:
-> Computer Engineering - King Monkut's University of Technology North Bangkok
-> - 2021 - now
-
-### Vocational Certificate:
-> Pre-Electrical Engineering Thai-german Pre-Engineering School - King Monkut's University of Technology North Bangkok
->  - 2018 - 2020
-
-### Middle School:
-> Suankularb Wittayalai Nonthaburi
->  - 2015 - 2017
-
-----------------------------------------------------------------
-
-
-## Blog
-#### [VirtualBox and MX linux Install Tutorial](https://pkrittapon.github.io/Install_linux_virtual-machine.html)
+# Blog
+#### [VirtualBox and MX linux Install Tutorial](https://pkrittapon.github.io//Blog/Install_linux_virtual-machine.html)
 <!-- #### [WSL2 and Ubuntu Install Tutorial](https://pkrittapon.github.io/Install_linux.html) -->
-#### [C/C++ Basic Arduino Control LED](https://pkrittapon.github.io/arduino_led.html)
+#### [C/C++ Basic Arduino Control LED Simulator with Wokwi](https://pkrittapon.github.io/Blog/arduino_led.html)
 
