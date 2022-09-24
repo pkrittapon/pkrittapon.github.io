@@ -18,6 +18,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างโปรแกรมใน 2 รูปแบบ การเขียนโปรแกรมแบบปกติ และการเขียนแบบ OOP โดยการเขียนโค้ดแบบแรก มีตัวอย่างตามโค้ดด้านล่าง
 
+
 ```C++
 
 #if defined(ESP32)//ตั้งค่า Pin ให้สามารถใช้กับบอร์ด Arduino Nano และ ESP32 ได้โดยไม่ต้องเปลี่ยน Setting Pin
@@ -60,26 +61,29 @@ void loop() {
 
 ```
 
+
 และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง
+
 
 ```C++
 
 ```
 
+
 ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
 
-  
  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4cIonyunK7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
 #### -รูปแบบที่ 2
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;เป็นรูปแบบที่ต้องการให้หลอด LED เริ่มจากดับทั้งหมด และค่อยๆติดที่ละดวง และเพิ่มจำนวนขึ้นเรื่อยๆ และเมื่อ LED ติดทั้งหมดจะค่อยๆดับทีละดวง แบบดวงไหนติดทีหลังจะดับก่อน
   
 
 &nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างโปรแกรมใน 2 รูปแบบ การเขียนโปรแกรมแบบปกติ และการเขียนแบบ OOP โดยการเขียนโค้ดแบบแรก มีตัวอย่างตามโค้ดด้านล่าง
+
 
 ```C++
 
@@ -150,6 +154,7 @@ void loop() {
 
 และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง
 
+
 ```C++
 
 ```
@@ -170,10 +175,12 @@ void loop() {
 
 #### -รูปแบบที่ 3
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;รูปแบบนี้เป็นรูปแบบที่ปรับความสว่างของ LED โดยแต่ละหลอดจะค่อยๆติด จนติดทั้งหมด จากนั้น LED ก็จะค่อยๆดับจนดับทั้งหมด
   
 
 &nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างการเขียนโปรแกรมแบบปกติ มีตัวอย่างตามโค้ดด้านล่าง
+
 
 ```C++
 
@@ -223,6 +230,7 @@ void loop() {
 
 ```
 
+
 ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
 
 
@@ -231,10 +239,12 @@ void loop() {
 
 #### -รูปแบบที่ 3
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;รูปแบบนี้เป็นรูปแบบที่ให้ LED ติดพร้อมกันที่ละหลายหลอด โดยแต่ละหลอดมีความสว่างไม่เท่ากัน แล้วค่อยๆเลื่อน LED ที่ติดพร้อมกันไปเรื่อยๆ ทำให้มีลักษณะคล้ายกับไฟวิ่ง
   
 
 &nbsp;&nbsp;&nbsp;&nbsp;ข้อนี้จะมีตัวอย่างการเขียนโปรแกรมแบบปกติ มีตัวอย่างตามโค้ดด้านล่าง
+
 
 ```C++
 
@@ -296,9 +306,12 @@ void loop() {
   }
 }
 
+
 ```
 
+
 ตัวอย่างการทำงานจากการ Simulator จาก Wokwi 
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7x_nj6HJhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -308,5 +321,3 @@ void loop() {
 
 
 #### [>> Homepage](https://pkrittapon.github.io)
-
-
