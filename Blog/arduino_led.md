@@ -62,7 +62,123 @@ void loop() {
 ```
 
 
-และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง
+และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง โดยแบ่งเป็นทั้งหมด 3 ไฟล์ โดยจะมีโค้ดการทำงานของโปรแกรม 1 ไฟล์ และอีก 2 ไฟล์เป็นไฟล์ของ Class
+
+```C++
+#This file name is Pin.h
+#ifndef PIN_H
+#define PIN_H
+
+#include <Arduino.h>
+
+// This is a C++ class for an Arduino digital pin
+class Pin {
+   public:
+     enum class Direction { OUT=0, IN=1, IN_PULLUP=2 };
+     // a class constructor with parameters
+     Pin( int8_t pin, Direction dir=Direction::IN, bool init_value=false );
+     // read the input pin
+     bool read( bool force_update=true ); 
+     // write the output pin
+     void write( bool value, bool force_update=true );
+     // toggle the output pin
+     void toggle( bool force_update=true ) ;
+     // assign a new value to the output pin
+     void operator=(bool value);
+     // set the direction of the pin
+     void setDirection( Direction dir, bool init_value=false );
+     // inline methods
+     inline operator bool()           { return _value; }
+     inline int8_t getPin()           { return _pin;   }
+     inline bool   getValue()         { return _value; }
+     inline Direction getDirection()  { return _dir;   }
+     // the class destructor
+     ~Pin() {} 
+
+   protected:
+     // initialize the GPIO pin
+     void init( int8_t pin, Direction dir, bool init_value );
+     // update the logic state of the GPIO pin 
+     void update();
+ 
+   private:
+     int8_t     _pin;   // the GPIO pin number
+     bool       _value; // the value of pin
+     Direction  _dir;   // the direction of pin
+};
+
+#endif
+///////////////////////////////////////////////////////////////////////////////////
+```
+
+
+```C++
+#This file name is Pin.cpp
+#include "Pin.h"
+
+// Class implementation for Pin.h
+
+Pin::Pin( int8_t pin, Direction dir, bool init_value ) {
+  init( pin, dir, init_value );
+}
+
+bool Pin::read( bool force_update ) {
+  if (force_update) { update(); }
+  return _value;
+}
+
+void Pin::write( bool value, bool force_update ) {
+  _value = value;
+  if (force_update) { update(); }
+}
+
+void Pin::toggle( bool force_update ) {
+  if ( _dir == Direction::OUT ) {
+     _value = !_value;
+  }
+  if (force_update) {
+     update();
+  }
+}
+     
+void Pin::operator=(bool value) {
+  write( value );
+}   
+
+void Pin::setDirection( Direction dir, bool init_value ) {
+  init( _pin, dir, init_value );
+}
+
+void Pin::init( int8_t pin, Direction dir, bool init_value ) {
+  _pin   = pin;
+  _dir   = dir;
+  _value = init_value;
+  if ( _dir == Direction::OUT ) { 
+    pinMode( _pin, OUTPUT );
+  }
+  else if ( _dir == Direction::IN ) {
+    pinMode( _pin, INPUT );
+  }
+  else if ( _dir == Direction::IN_PULLUP ) {
+    pinMode( _pin, INPUT_PULLUP );
+  }
+  update();
+}
+
+void Pin::update() {
+  if ( _dir == Direction::OUT ) { 
+    digitalWrite( _pin, _value ? true : false ) ;
+    //Serial.printf( "Debug> write output: %d on pin %d\n", _value, _pin );
+  }
+  else {
+    _value = digitalRead( _pin ) ? true : false;
+    //Serial.printf( "Debug> read input: %d on pin %d\n", _value, _pin );
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+```
 
 
 ```C++
