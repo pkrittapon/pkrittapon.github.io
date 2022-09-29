@@ -62,7 +62,7 @@ void loop() {
 ```
 
 
-และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง โดยแบ่งเป็นทั้งหมด 3 ไฟล์ โดยจะมีโค้ดการทำงานของโปรแกรม 1 ไฟล์ และอีก 2 ไฟล์เป็นไฟล์ของ Class
+และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง โดยแบ่งเป็นทั้งหมด 3 ไฟล์ โดยจะมีโค้ด 2 ไฟล์เป็นไฟล์ของ Class และอีก 1 ไฟล์เป็นไฟล์การทำงานของโปรแกรม
 
 ```C++
 #This file name is Pin.h
@@ -182,6 +182,7 @@ void Pin::update() {
 
 
 ```C++
+#Programming Code
 #include "Pin.h"
 
 #define DEFAULT_PIN   (22) // (onboard LED)
@@ -312,10 +313,65 @@ void loop() {
 ```
 
 
-และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง
+และการเขียนโค้ดด้วย Class ตัวอย่างตามโค้ดด้านล่าง โดยไฟล์ของ Class จะใช้ไฟล์เดียวกันกับการคุม LED รูปแบบที่ 1
 
 
 ```C++
+
+#include "Pin.h"
+
+#define DEFAULT_PIN   (22) // (onboard LED)
+#define OFF           (0)
+#define ON            (1)
+#define REPEAT_TIMES  (20)
+#define DELAY_MS      (300)
+
+// define a function type
+typedef void (*test_func_ptr)(int);
+
+// function prototypes
+void test1(int);
+void test2(int);
+
+// an array of function pointers which point to test functions
+test_func_ptr test_func_list[] = { &test1, &test2};
+
+int LED_PINS[] = {23,22,32,33,25,26,27,14,12,13};
+
+void setup() {
+   Serial.begin( 115200 );
+   Serial.flush();
+}
+
+int num_funcs = sizeof( test_func_list ) / sizeof(test_func_ptr);
+int num_pins = sizeof( LED_PINS ) / sizeof(int);
+
+void loop() {
+
+   for ( int i=0; i < num_funcs; i++ ) {
+      for (int j=0; j<num_pins; j++){
+      test_func_list[i](j);
+      }
+   }
+}
+
+void test1( int led_pin ) {
+   Pin pin( LED_PINS[led_pin] );
+   pin.setDirection( Pin::Direction::OUT );
+   Serial.printf( "use pin: %d\n", LED_PINS[led_pin] );
+   pin = ON;
+   delay(  DELAY_MS );
+}
+
+void test2( int led_pin) {
+   Pin pin( LED_PINS[num_pins-led_pin-1] );
+   pin.setDirection( Pin::Direction::OUT );
+   Serial.printf( "use pin: %d\n", LED_PINS[num_pins-led_pin-1] );
+   pin = OFF;
+   delay(  DELAY_MS );
+}
+
+/////////////////////////////////////////////////////////////////////////////
 
 ```
 
