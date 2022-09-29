@@ -66,6 +66,48 @@ void loop() {
 
 
 ```C++
+#include "Pin.h"
+
+#define DEFAULT_PIN   (22) // (onboard LED)
+#define OFF           (0)
+#define ON            (1)
+#define REPEAT_TIMES  (20)
+#define DELAY_MS      (500)
+
+// define a function type
+typedef void (*test_func_ptr)(int);
+
+// function prototypes
+void test1(int);
+void test2(int);
+
+// an array of function pointers which point to test functions
+test_func_ptr test_func_list[] = { &test1};
+
+int LED_PINS[] = {23,22,32,33,25,26,27,14,12,13};
+
+void setup() {
+   Serial.begin( 115200 );
+   Serial.flush();
+}
+
+void loop() {
+   int num_funcs = sizeof( test_func_list ) / sizeof(test_func_ptr);
+   int num_pins = sizeof( LED_PINS ) / sizeof(int);
+   for ( int i=0; i < num_pins; i++ ) {
+      test_func_list[i % num_funcs]( LED_PINS[ i ] );
+   }
+}
+
+void test1( int led_pin=DEFAULT_PIN ) {
+   Pin pin( led_pin );
+   pin.setDirection( Pin::Direction::OUT );
+   pin = OFF;
+   Serial.printf( "use pin: %d\n", led_pin );
+   pin = ON;
+   delay(  DELAY_MS );
+   pin = OFF;
+}
 
 ```
 
