@@ -34,7 +34,7 @@
  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-<img src="/Blog/picture/docker/Screenshot 2022-10-11 160502.png" alt="Docker2" width="883" height="58"/>
+<img src="/Blog/picture/docker/Screenshot 2022-10-11 160502.png" alt="Docker2" width="600" height="39"/>
 
 
 - ตั้งค่า repository ด้วย command ด้านล่าง
@@ -45,7 +45,7 @@
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-<img src="/Blog/picture/docker/Screenshot 2022-10-11 160539.png" alt="Docker3" width="880" height="75"/>
+<img src="/Blog/picture/docker/Screenshot 2022-10-11 160539.png" alt="Docker3" width="600" height="51"/>
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;3.ติดตั้ง Docker Engine 
@@ -63,7 +63,7 @@
  $ apt-cache madison docker-ce
 ```
 
-<img src="/Blog/picture/docker/Screenshot 2022-10-11 172427.png" alt="Docker4" width="1007" height="200"/>
+<img src="/Blog/picture/docker/Screenshot 2022-10-11 172427.png" alt="Docker4" width="600" height="119"/>
 
 
 จากนั้นนำ String Version ของ Column บนสุด เช่น <code>5:20.10.18~3-0ubuntu-jammy</code> แทนใน <VERSION_STRING>
@@ -72,7 +72,7 @@
  $  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
 ```
 
-<img src="/Blog/picture/docker/Screenshot 2022-10-11 161852.png" alt="Docker5" width="1562" height="27"/>
+<img src="/Blog/picture/docker/Screenshot 2022-10-11 161852.png" alt="Docker5" width="600" height="10"/>
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;4.ติดตั้ง Docker Engine เสร็จเรียบร้อย
@@ -84,7 +84,7 @@
  $ sudo docker run hello-world
 ```
 
-<img src="/Blog/picture/docker/Screenshot 2022-10-11 162029.png" alt="Docker5" width="882" height="518"/>
+<img src="/Blog/picture/docker/Screenshot 2022-10-11 162029.png" alt="Docker5" width="600" height="352"/>
 
 
 #### [>> Homepage](https://pkrittapon.github.io)
