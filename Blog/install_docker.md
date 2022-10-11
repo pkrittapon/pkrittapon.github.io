@@ -22,6 +22,8 @@
     gnupg \
     lsb-release
 ```
+![Docker1](/Blog/picture/docker/Screenshot 2022-10-11 160409.png "Install Docker1")
+<!-- <img src="/Blog/picture/docker/Screenshot 2022-10-11 160409.png" alt="Docker1" width="588" height="281"/> -->
 
 
 - เพิ่ม GPG Key ของ Docker Official
@@ -48,7 +50,26 @@
 
 
 - แสดงลิสต์ของ Version ใน repository
-```
+```ShellSession
  $ apt-cache madison docker-ce
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### [>> Homepage](https://pkrittapon.github.io)
