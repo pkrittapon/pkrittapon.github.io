@@ -1,5 +1,5 @@
 # Profile
-![alt text](IMG_7739-1.jpg "Profile picture")
+![Profile](IMG_7739-1.jpg "Profile picture")
 
 ## contact me
 
