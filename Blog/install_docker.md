@@ -3,13 +3,13 @@
 
 
 ## ขั้นตอนการติดตั้ง Docker ใน Ubuntu 22.04.1
-### &nbsp;&nbsp;&nbsp;&nbsp;1.เริ่มจากการ Uninstall Docker ใน Version เก่าออกก่อน
+### &nbsp;&nbsp;&nbsp;&nbsp;1. เริ่มจากการ Uninstall Docker ใน Version เก่าออกก่อน
 ```ShellSession
  $ sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
 
-### &nbsp;&nbsp;&nbsp;&nbsp;2.ก่อนการติดตั้ง Docker Engine ในครั้งแรก ต้องตั้งค่า repository ของ Docker ก่อน
+### &nbsp;&nbsp;&nbsp;&nbsp;2. ก่อนการติดตั้ง Docker Engine ในครั้งแรก ต้องตั้งค่า repository ของ Docker ก่อน
 
 
 - อัพเดทแพคเกจ และติดตั้ง repository
@@ -48,7 +48,9 @@
 <img src="/Blog/picture/docker/Screenshot 2022-10-11 160539.png" alt="Docker3" width="600" height="51"/>
 
 
-### &nbsp;&nbsp;&nbsp;&nbsp;3.ติดตั้ง Docker Engine 
+### &nbsp;&nbsp;&nbsp;&nbsp;3. ติดตั้ง Docker Engine 
+
+
 - อัพเดทแพคเกจ และติดตั้ง Docker Engine Version ล่าสุด
 
 ```ShellSession
@@ -66,7 +68,7 @@
 <img src="/Blog/picture/docker/Screenshot 2022-10-11 172427.png" alt="Docker4" width="600" height="119"/>
 
 
-จากนั้นนำ String Version ของ Column บนสุด เช่น <code>5:20.10.18~3-0ubuntu-jammy</code> แทนใน <VERSION_STRING>
+จากนั้นนำ String Version ของ Column บนสุด เช่น <code>5:20.10.18~3-0ubuntu-jammy</code> แทนใน "<VERSION_STRING>"
 
 ```ShellSession
  $  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
@@ -75,7 +77,7 @@
 <img src="/Blog/picture/docker/Screenshot 2022-10-11 161852.png" alt="Docker5" width="600" height="10"/>
 
 
-### &nbsp;&nbsp;&nbsp;&nbsp;4.ติดตั้ง Docker Engine เสร็จเรียบร้อย
+### &nbsp;&nbsp;&nbsp;&nbsp;4. ติดตั้ง Docker Engine เสร็จเรียบร้อย
 
 - หลังจากติดตั้ง Docker Engine เสร็จ ทดลองความถูกต้องด้วย Command ต่อไปนี้
 
