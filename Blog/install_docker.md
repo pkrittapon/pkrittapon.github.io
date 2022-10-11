@@ -68,7 +68,7 @@
 <img src="/Blog/picture/docker/Screenshot 2022-10-11 172427.png" alt="Docker4" width="600" height="119"/>
 
 
-จากนั้นนำ String Version ของ Column บนสุด เช่น `5:20.10.18~3-0ubuntu-jammy` แทนใน VERSION_STRING
+จากนั้นนำ String Version ของ Column บนสุด เช่น `5:20.10.18~3-0ubuntu-jammy` แทนใน <<VERSION_STRING>>
 
 ```ShellSession
  $  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
