@@ -89,4 +89,5 @@
 <img src="/Blog/picture/docker/Screenshot 2022-10-11 162029.png" alt="Docker5" width="600" height="352"/>
 
 
+- เมื่อได้ผลลัพธ์ตามรูป การติดตั้ง Docker Engine ถูกต้องเรียบร้อย
 #### [>> Homepage](https://pkrittapon.github.io)
