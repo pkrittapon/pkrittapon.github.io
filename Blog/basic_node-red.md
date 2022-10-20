@@ -18,9 +18,9 @@
 ### &nbsp;&nbsp;&nbsp;&nbsp;2. Setting Block ที่สองสำหรับ Function ที่แปลงข้อมูลเวลาให้เป็น String ด้วย code ด้านล่างในภาษา javascript
 
 ```javascript
-  // Convert the payload to a String object
-  msg.payload = new Date(msg.payload).toString();
-  return msg;
+ // Convert the payload to a String object
+ msg.payload = new Date(msg.payload).toString();
+ return msg;
 ```
 
 <img src="/Blog/picture/basic_node-red/Screenshot 2022-10-19 214804.png" alt="ExpNodered2"/>
