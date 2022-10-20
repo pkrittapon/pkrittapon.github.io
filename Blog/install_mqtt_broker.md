@@ -1,9 +1,9 @@
 # Install MQTT Broker in Ubuntu 22.04.1 for VirtualBox
 -------------------------------------------------
-สำหรับขั้นตอนที่สำคัญการติดตั้ง MQTT Broker ใน VirtualBox คือการตั้งค่า Network ให้เป็นโหมด Bridged Adapter
-
-
-<img src="/Blog/picture/broker/Screenshot 2022-10-20 194405.png" alt="ฺBroker1"/>
+> สำหรับขั้นตอนที่สำคัญการติดตั้ง MQTT Broker ใน VirtualBox คือการตั้งค่า Network ให้เป็นโหมด Bridged Adapter
+>
+>
+> <img src="/Blog/picture/broker/Screenshot 2022-10-20 194405.png" alt="ฺBroker1"/>
 
 ## ขั้นตอนการติดตั้ง Mosquitto MQTT Broker
 
