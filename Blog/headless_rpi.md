@@ -8,13 +8,13 @@
 
 <img src="/Blog/picture/headless/Screenshot 2022-10-20 223618.png" alt="headless2"/>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1. Write ไฟล์ลง SD Card
+### &nbsp;&nbsp;&nbsp;&nbsp;2. Write ไฟล์ลง SD Card
 
 <img src="/Blog/picture/headless/Screenshot 2022-09-30 133838.png" alt="headless3"/>
 
 <img src="/Blog/picture/headless/Screenshot 2022-09-30 134148.png" alt="headless4"/>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1. Boot Raspberry pi แล้วทำการ Remote ด้วย Secure Shell
+### &nbsp;&nbsp;&nbsp;&nbsp;3. Boot Raspberry pi แล้วทำการ Remote ด้วย Secure Shell
 
 ```ShellSession
   $ ssh pi@raspberrypi.local
@@ -22,7 +22,7 @@
 
 <img src="/Blog/picture/headless/Screenshot 2022-09-30 142555.png" alt="headless5"/>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1. หรือจะ Remote Desktop ด้วย VNC โดยการตั้งค่า Raspberry pi ให้สามารถใช้งาน VNC ได้
+### &nbsp;&nbsp;&nbsp;&nbsp;4. หรือจะ Remote Desktop ด้วย VNC โดยการตั้งค่า Raspberry pi ให้สามารถใช้งาน VNC ได้
 
 ```ShellSession
   $ sudo raspi-config
@@ -42,7 +42,7 @@
 
 <img src="/Blog/picture/headless/Screenshot 2022-09-30 143820.png" alt="headless11"/>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1. ใช้โปรแกรม VNC Client เช่น RealVNC Viewer เพื่อ Remote Desktop ใช้งาน Raspberry pi
+### &nbsp;&nbsp;&nbsp;&nbsp;5. ใช้โปรแกรม VNC Client เช่น RealVNC Viewer เพื่อ Remote Desktop ใช้งาน Raspberry pi
 
 <img src="/Blog/picture/headless/Screenshot 2022-09-30 143306.png" alt="headless12"/>
 
