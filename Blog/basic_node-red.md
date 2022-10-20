@@ -2,7 +2,7 @@
 ------------------------------------------------
 
 
-## ตัวอย่างการ Config Node-red เพื่อใช้งานกับ Protocal MQTT
+## ตัวอย่างการ Configure Node-red เพื่อใช้งานกับ Protocal MQTT
 - รูปตัวอย่าง flow การทำงาน Node-red
 
 
