@@ -2,7 +2,7 @@
 -------------------------------------------------
 ## Create Raspberry pi OS in VirtualBox tutorial
 
-### 1. Download file .iso Raspberry pi OS from [Click Here](https://www.raspberrypi.com/software/raspberry-pi-desktop/)  to go to Download Raspberry pi for Desktop
+### 1. Download file .iso Raspberry pi OS   [Click Here](https://www.raspberrypi.com/software/raspberry-pi-desktop/)  to go to Download Raspberry pi for Desktop
 
 <img src="/Blog/picture/rpi_virtualbox/Screenshot 2022-10-20 211423.png" alt="rpivm1" />
 
