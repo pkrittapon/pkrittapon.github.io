@@ -20,7 +20,7 @@
 
 2. ก่อนการติดตั้ง Zigbee2MQTT จำเป็นต้องติดตั้ง NodeJS ก่อน โดยมีคำสั่งในการติดตั้งดังนี้
 
-```ShellSession
+```bash
   $ sudo apt install -y curl
   $ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   $ sudo apt install -y nodejs
