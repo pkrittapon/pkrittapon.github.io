@@ -14,11 +14,11 @@
 --------------------------------------
 ## การติดตั้ง Zigbee2MQTT สำหรับ Ubuntu ใน VirtualBox
 
-1. การที่ต้องการติดตั้ง Zigbee2MQTT เข้ากับ Virtual Machine ต้องทำให้ Virtual Machine เข้าถึง USB ในเครื่อง Host 
+1.การที่ต้องการติดตั้ง Zigbee2MQTT เข้ากับ Virtual Machine ต้องทำให้ Virtual Machine เข้าถึง USB ในเครื่อง Host 
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 182213.png" alt="zigbee2"/>
 
-2. ก่อนการติดตั้ง Zigbee2MQTT จำเป็นต้องติดตั้ง NodeJS ก่อน โดยมีคำสั่งในการติดตั้งดังนี้
+2.ก่อนการติดตั้ง Zigbee2MQTT จำเป็นต้องติดตั้ง NodeJS ก่อน โดยมีคำสั่งในการติดตั้งดังนี้
 
 ```bash
   $ sudo apt install -y curl
@@ -26,7 +26,7 @@
   $ sudo apt install -y nodejs
 ```
 
-3. ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
+3.ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
 
 ```ShellSession
   # Clone the Zigbee2MQTT repository.
@@ -45,7 +45,7 @@
   $ npm ci
 ```
 
-4. จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
+4.จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
 
 ```ShellSession
   $ nano data/configuration.yaml
@@ -73,14 +73,14 @@ frontend:
   port: 8080
 ```
 
-5. ทำคำสั่งต่อไปนี้เพื่อเพิ่มชื่อผู้ใช้ให้มีสิทธิ๋เข้าถึงอุปกรณ์ที่เป็น Serial Port
+5.ทำคำสั่งต่อไปนี้เพื่อเพิ่มชื่อผู้ใช้ให้มีสิทธิ๋เข้าถึงอุปกรณ์ที่เป็น Serial Port
 
 ```ShellSession
   # Add the current user to the 'dialout' group
   $ sudo usermod -a -G dialout $USER
 ```
 
-6. ลองทำคำสั่งต่อไปนี้เพื่อเริ่มทำงาน
+6.ลองทำคำสั่งต่อไปนี้เพื่อเริ่มทำงาน
 
 ```ShellSession
   # Start ZigBee2MQTT 
