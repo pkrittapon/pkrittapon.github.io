@@ -3,7 +3,7 @@
 
 ## ขั้นตอนการติดตั้ง Node-red ใน Ubuntu 22.04.1
 ### &nbsp;&nbsp;&nbsp;&nbsp;1. ติดตั้ง Curl และ Node
-```ShellSession
+```bash
  $ sudo apt install -y curl
  
  $ sudo -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash
@@ -20,7 +20,7 @@
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;2. ติดตั้ง Node-red
-```ShellSession
+```bash
 $ sudo npm install -g --unsafe-perm node-red
 
 $ node-red
