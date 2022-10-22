@@ -4,7 +4,7 @@
 
 ## ขั้นตอนการติดตั้ง Docker ใน Ubuntu 22.04.1
 ### &nbsp;&nbsp;&nbsp;&nbsp;1. เริ่มจากการ Uninstall Docker ใน Version เก่าออกก่อน
-```ShellSession
+```bash
  $ sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
@@ -14,7 +14,7 @@
 
 - อัพเดทแพคเกจ และติดตั้ง repository
 
-```ShellSession
+```bash
  $ sudo apt-get update
  
  $ sudo apt-get install \
@@ -29,7 +29,7 @@
 
 - เพิ่ม GPG Key ของ Docker Official
 
-```ShellSession
+```bash
  $ sudo mkdir -p /etc/apt/keyrings
  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
@@ -39,7 +39,7 @@
 
 - ตั้งค่า repository ด้วย command ด้านล่าง
 
-```ShellSession
+```bash
  $ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -53,7 +53,7 @@
 
 - อัพเดทแพคเกจ และติดตั้ง Docker Engine Version ล่าสุด
 
-```ShellSession
+```bash
  $ sudo apt-get update
  $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
@@ -61,7 +61,7 @@
 
 - แสดงลิสต์ของ Version ใน repository
 
-```ShellSession
+```bash
  $ apt-cache madison docker-ce
 ```
 
@@ -70,7 +70,7 @@
 
 จากนั้นนำ String Version ของ Column บนสุด เช่น `5:20.10.18~3-0ubuntu-jammy` แทนใน <<VERSION_STRING>>
 
-```ShellSession
+```bash
  $  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
 ```
 
@@ -81,7 +81,7 @@
 
 - หลังจากติดตั้ง Docker Engine เสร็จ ทดลองความถูกต้องด้วย Command ต่อไปนี้
 
-```ShellSession
+```bash
  $ sudo service docker start
  $ sudo docker run hello-world
 ```
