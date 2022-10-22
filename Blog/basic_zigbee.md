@@ -14,11 +14,11 @@
 --------------------------------------
 ## การติดตั้ง Zigbee2MQTT สำหรับ Ubuntu ใน VirtualBox
 
-1.การที่ต้องการติดตั้ง Zigbee2MQTT เข้ากับ Virtual Machine ต้องทำให้ Virtual Machine เข้าถึง USB ในเครื่อง Host 
+### 1. การที่ต้องการติดตั้ง Zigbee2MQTT เข้ากับ Virtual Machine ต้องทำให้ Virtual Machine เข้าถึง USB ในเครื่อง Host 
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 182213.png" alt="zigbee2"/>
 
-2.ก่อนการติดตั้ง Zigbee2MQTT จำเป็นต้องติดตั้ง NodeJS ก่อน โดยมีคำสั่งในการติดตั้งดังนี้
+### 2. ก่อนการติดตั้ง Zigbee2MQTT จำเป็นต้องติดตั้ง NodeJS ก่อน โดยมีคำสั่งในการติดตั้งดังนี้
 
 ```bash
   $ sudo apt install -y curl
@@ -26,7 +26,7 @@
   $ sudo apt install -y nodejs
 ```
 
-3.ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
+### 3. ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
 
 ```bash
   # Clone the Zigbee2MQTT repository.
@@ -45,7 +45,7 @@
   $ npm ci
 ```
 
-4.จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
+### 4. จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
 
 ```bash
   $ nano data/configuration.yaml
@@ -73,14 +73,14 @@ frontend:
   port: 8080
 ```
 
-5.ทำคำสั่งต่อไปนี้เพื่อเพิ่มชื่อผู้ใช้ให้มีสิทธิ๋เข้าถึงอุปกรณ์ที่เป็น Serial Port
+### 5. ทำคำสั่งต่อไปนี้เพื่อเพิ่มชื่อผู้ใช้ให้มีสิทธิ๋เข้าถึงอุปกรณ์ที่เป็น Serial Port
 
 ```bash
   # Add the current user to the 'dialout' group
   $ sudo usermod -a -G dialout $USER
 ```
 
-6.ลองทำคำสั่งต่อไปนี้เพื่อเริ่มทำงาน
+### 6. ลองทำคำสั่งต่อไปนี้เพื่อเริ่มทำงาน
 
 ```bash
   # Start ZigBee2MQTT 
@@ -109,21 +109,21 @@ frontend:
 -------------------------------------------------------------------------------------
 ## การทดลองนำข้อมูลที่ได้จากอุปกรณ์ Zigbee มาแสดงผลที่ Node-red Dashboard 
 &nbsp;&nbsp;&nbsp;&nbsp; การนำอุปกรณ์ Zigbee โดยในบทความนี้จะใช้อุปกรณ์ที่สามารถวัดค่าความสว่างให้แสดงผลที่ Node-red Dashboard โดยที่ Node-red Dashboard เป็น UI ในการแสดงผลต่างๆเบื้องต้น โดยมีขั้นตอนในการติดต้ั้งดังนี้
-1. ไปที่หน้าต่างแสดงผลของ Node-red จากนั้นไปที่แถบ 3 แถบด้านขวาบน Manage pllette > Palette > Install จากนั้นพิมพ์ชื่อโมดูล ```node-red-dashboard``` แล้วกด ```install-red```
+### 1. ไปที่หน้าต่างแสดงผลของ Node-red จากนั้นไปที่แถบ 3 แถบด้านขวาบน Manage pllette > Palette > Install จากนั้นพิมพ์ชื่อโมดูล ```node-red-dashboard``` แล้วกด ```install-red```
 
 <img src="/Blog/picture/zigbee2mqtt/unknown.png" alt="zigbee7"/>
 
-2. เมื่อติดตั้งเสร็จ หน้าต่างแสดงผลจะอยู่ที่ [localhost:1880/ui](localhost:1880/ui)
+### 2. เมื่อติดตั้งเสร็จ หน้าต่างแสดงผลจะอยู่ที่ [localhost:1880/ui](localhost:1880/ui)
 
-3. โดยตัวอย่าง Flow จะมีลักษณะตามรูปด้านล่าง 
+### 3. โดยตัวอย่าง Flow จะมีลักษณะตามรูปด้านล่าง 
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 195742.png" alt="zigbee8"/>
 
-4. การ Configure โหนด MQTT Subscribe ตามรูปด้านล่าง
+### 4. การ Configure โหนด MQTT Subscribe ตามรูปด้านล่าง
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 200051.png" alt="zigbee9"/>
 
-5. การ Configure โหนด Function ที่ทำหน้าที่แปลงข้อมูลที่เป็น json ให้กลายเป็นข้อมูลภายในไฟล์ json 
+### 5. การ Configure โหนด Function ที่ทำหน้าที่แปลงข้อมูลที่เป็น json ให้กลายเป็นข้อมูลภายในไฟล์ json 
 
 ```js
 msg.payload = msg.payload.illuminance_lux
@@ -132,11 +132,11 @@ return msg;
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 201119.png" alt="zigbee10"/>
 
-5. การ Configure โหนด Gauge ให้รับค่ามาแสดงผล
+### 6. การ Configure โหนด Gauge ให้รับค่ามาแสดงผล
 
 <img src="/Blog/picture/zigbee2mqtt/unknown (1).png" alt="zigbee11"/>
 
-6. ผลลัพธ์ที่ได้จากการทำงาน
+### 7. ผลลัพธ์ที่ได้จากการทำงาน
 
 <img src="/Blog/picture/zigbee2mqtt/Screenshot 2022-10-22 201844.png" alt="zigbee12"/>
 
