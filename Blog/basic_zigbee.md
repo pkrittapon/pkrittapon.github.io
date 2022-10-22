@@ -28,7 +28,7 @@
 
 3.ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
 
-```ShellSession
+```bash
   # Clone the Zigbee2MQTT repository.
   $ git clone https://github.com/Koenkk/zigbee2mqtt.git
 
@@ -47,7 +47,7 @@
 
 4.จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
 
-```ShellSession
+```bash
   $ nano data/configuration.yaml
 ```
 
@@ -75,14 +75,14 @@ frontend:
 
 5.ทำคำสั่งต่อไปนี้เพื่อเพิ่มชื่อผู้ใช้ให้มีสิทธิ๋เข้าถึงอุปกรณ์ที่เป็น Serial Port
 
-```ShellSession
+```bash
   # Add the current user to the 'dialout' group
   $ sudo usermod -a -G dialout $USER
 ```
 
 6.ลองทำคำสั่งต่อไปนี้เพื่อเริ่มทำงาน
 
-```ShellSession
+```bash
   # Start ZigBee2MQTT 
   $ npm start
 ```
