@@ -126,7 +126,7 @@ frontend:
 5. การ Configure โหนด Function ที่ทำหน้าที่แปลงข้อมูลที่เป็น json ให้กลายเป็นข้อมูลภายในไฟล์ json 
 
 ```js
-msg.payload = msg.payload.illuminance_lux;
+msg.payload = msg.payload.illuminance_lux
 return msg;
 ```
 
