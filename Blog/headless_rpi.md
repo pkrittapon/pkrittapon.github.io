@@ -16,7 +16,7 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;3. Boot Raspberry pi แล้วทำการ Remote ด้วย Secure Shell
 
-```ShellSession
+```bash
   $ ssh pi@raspberrypi.local
 ```
 
@@ -24,7 +24,7 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;4. หรือจะ Remote Desktop ด้วย VNC โดยการตั้งค่า Raspberry pi ให้สามารถใช้งาน VNC ได้
 
-```ShellSession
+```bash
   $ sudo raspi-config
 ```
 
