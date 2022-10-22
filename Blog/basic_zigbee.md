@@ -29,20 +29,20 @@
 3. ขั้นตอนการติดตั้ง Zigbee2MQTT โดยมีคำสั่งในการติดตั้งดังนี้
 
 ```ShellSession
-# Clone the Zigbee2MQTT repository.
-$ git clone https://github.com/Koenkk/zigbee2mqtt.git
+  # Clone the Zigbee2MQTT repository.
+  $ git clone https://github.com/Koenkk/zigbee2mqtt.git
 
-# Move the zigbee2mqtt directory to /opt
-$ sudo mv zigbee2mqtt /opt
+  # Move the zigbee2mqtt directory to /opt
+  $ sudo mv zigbee2mqtt /opt
 
-# Change the owner of the /opt/zigbee2mqtt directory.
-$ sudo chown -R $USER:$USER /opt/zigbee2mqtt
+  # Change the owner of the /opt/zigbee2mqtt directory.
+  $ sudo chown -R $USER:$USER /opt/zigbee2mqtt
 
-# Change the current directory to '/opt/zigbee2mqtt'.
-$ cd /opt/zigbee2mqtt
+  # Change the current directory to '/opt/zigbee2mqtt'.
+  $ cd /opt/zigbee2mqtt
 
-# Install package dependencies
-$ npm ci
+  # Install package dependencies
+  $ npm ci
 ```
 
 4. จากนั้นก่อนเริ่มต้นการทำงานของ Zigbee2MQTT ให้สร้างและเปิดไฟล์  ```data/configuration.yaml``` ภายใน Directory ```/opt/zigbee2mqtt``` เพื่อตั้งค่าการใช้งานสำหรับ Zigbee2MQTT
@@ -269,3 +269,5 @@ return msg;
     }
 ]
 ```
+
+#### [>> Homepage](https://pkrittapon.github.io)
