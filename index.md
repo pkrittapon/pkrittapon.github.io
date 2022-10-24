@@ -12,4 +12,5 @@
 #### [Install Node-red Ubuntu Tutorial](https://pkrittapon.github.io/Blog/install_node-red.html)
 #### [Basic Node-red Example](https://pkrittapon.github.io/Blog/basic_node-red.html)
 #### [Install Zigbee2MQTT And Connect to Node-red](https://pkrittapon.github.io/Blog/basic_zigbee.html)
+#### [Use ESP32 to Mqtt Client Publish to Mqtt Broker](https://pkrittapon.github.io/Blog/esp_mqtt_publish.html)
 
